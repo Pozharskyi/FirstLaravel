@@ -5,6 +5,7 @@ namespace App\Providers;
 
 
 use Illuminate\Support\ServiceProvider;
+use Jelovac\Bitly4laravel\Bitly4laravel;
 use Vinelab\UrlShortener\Shorten;
 
 class BitlyServiceProvider extends ServiceProvider
@@ -25,6 +26,7 @@ class BitlyServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->app->bind('Bitly', Shorten::class);
+//        $this->app->bind('Shorten', Shorten::class);
+        $this->app->bind('Bitly', Bitly4laravel::class);
     }
 }

@@ -155,11 +155,14 @@ return [
         App\Providers\AuthServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
+        //custom provider for bit.ly libreries
         App\Providers\BitlyServiceProvider::class,
 
         //ide-helper
         Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider::class,
+        //bit.ly libreries providers
 //        Vinelab\UrlShortener\UrlShortenerServiceProvider::class
+        'Jelovac\Bitly4laravel\Bitly4laravelServiceProvider',
     ],
 
     /*
@@ -206,6 +209,7 @@ return [
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
 //        'Shorten' => Vinelab\UrlShortener\Facades\ShortenFacadeAccessor::class,
+        'Bitly' => 'Jelovac\Bitly4laravel\Facades\Bitly4laravel',
     ],
 
 ];

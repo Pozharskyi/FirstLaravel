@@ -11,10 +11,12 @@ class ShortenUrlController extends Controller
 {
     public function index()
     {
-//        $shorten = app()->make('Bitly');
+
         $bitly = app()->make('Bitly');
+
+        //our link wich we need to short
         $link = 'http://refactoring.com/catalog/';
-        return  $bitly->shorten($link);
-//        'Normal link: ' . $link . PHP_EOL . 'Shorted link: ' .$bitly->shorten($link);
+        return $bitly->shorten($link);
+
     }
 }
